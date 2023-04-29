@@ -28,7 +28,7 @@
 				},
 				{
 					"type": "plain_text",
-					"text": "*Repository:* https://github.com/izybelly/cicd_assignment.git",
+					"text": "*Repository:* {{repository_link}}",
 					"emoji": true
 				}
 			]
@@ -38,7 +38,7 @@
 			"elements": [
 				{
 					"type": "plain_text",
-					"text": "animated-spoon-production.up.railway.app",
+					"text": "{{railway_link}}",
 					"emoji": true
 				}
 			]
