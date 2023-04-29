@@ -13,22 +13,22 @@
 			"fields": [
 				{
 					"type": "plain_text",
-					"text": "*Name:* Isabelle",
+					"text": "Name: Isabelle",
 					"emoji": true
 				},
 				{
 					"type": "plain_text",
-					"text": "*Email:* E1112903@u.nus.edu",
+					"text": "Email: E1112903@u.nus.edu",
 					"emoji": true
 				},
 				{
 					"type": "plain_text",
-					"text": "*Matriculation:* A0269520A",
+					"text": "Matriculation: A0269520A",
 					"emoji": true
 				},
 				{
 					"type": "plain_text",
-					"text": "*Repository:* {{repository_link}}",
+					"text": "Repository: ${{env.REPOSITORY}}",
 					"emoji": true
 				}
 			]
@@ -38,7 +38,7 @@
 			"elements": [
 				{
 					"type": "plain_text",
-					"text": "{{railway_link}}",
+					"text": "${{env.RAILWAY}}",
 					"emoji": true
 				}
 			]
