@@ -1,0 +1,47 @@
+{
+	"blocks": [
+		{
+			"type": "header",
+			"text": {
+				"type": "plain_text",
+				"text": "DIPSA 56 CI/CD Submission",
+				"emoji": true
+			}
+		},
+		{
+			"type": "section",
+			"fields": [
+				{
+					"type": "plain_text",
+					"text": "*Name:* Isabelle",
+					"emoji": true
+				},
+				{
+					"type": "plain_text",
+					"text": "*Email:* E1112903@u.nus.edu",
+					"emoji": true
+				},
+				{
+					"type": "plain_text",
+					"text": "*Matriculation:* A0269520A",
+					"emoji": true
+				},
+				{
+					"type": "plain_text",
+					"text": "*Repository:* https://github.com/izybelly/cicd_assignment.git",
+					"emoji": true
+				}
+			]
+		},
+		{
+			"type": "context",
+			"elements": [
+				{
+					"type": "plain_text",
+					"text": "animated-spoon-production.up.railway.app",
+					"emoji": true
+				}
+			]
+		}
+	]
+}
