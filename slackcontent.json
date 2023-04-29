@@ -28,7 +28,7 @@
 				},
 				{
 					"type": "plain_text",
-					"text": "Repository: ${{env.REPOSITORY}}",
+					"text": "Repository: ${{vars.REPOSITORY}}",
 					"emoji": true
 				}
 			]
@@ -38,7 +38,7 @@
 			"elements": [
 				{
 					"type": "plain_text",
-					"text": "${{env.RAILWAY}}",
+					"text": "${{vars.RAILWAY}}",
 					"emoji": true
 				}
 			]
