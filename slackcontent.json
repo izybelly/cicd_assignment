@@ -28,7 +28,7 @@
 				},
 				{
 					"type": "plain_text",
-					"text": "Repository: ${{secret.REPO}}",
+					"text": "Repository: ${{secrets.REPO}}",
 					"emoji": true
 				}
 			]
@@ -38,7 +38,7 @@
 			"elements": [
 				{
 					"type": "plain_text",
-					"text": "${{secret.RAILWAY_DOMAIN}}",
+					"text": "${{secrets.RAILWAY_DOMAIN}}",
 					"emoji": true
 				}
 			]
