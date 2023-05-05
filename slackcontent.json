@@ -3,7 +3,7 @@
 		{
 			"type": "header",
 			"text": {
-				"type": "plain_text",
+				"type": "mrkdwn",
 				"text": "DIPSA 56 CI/CD Submission",
 				"emoji": true
 			}
@@ -12,23 +12,23 @@
 			"type": "section",
 			"fields": [
 				{
-					"type": "plain_text",
+					"type": "mrkdwn",
 					"text": "*Name:* Isabelle",
 					"emoji": true
 				},
 				{
-					"type": "plain_text",
+					"type": "mrkdwn",
 					"text": "*Email:* E1112903@u.nus.edu",
 					"emoji": true
 				},
 				{
-					"type": "plain_text",
+					"type": "mrkdwn",
 					"text": "*Matriculation:* A0269520A",
 					"emoji": true
 				},
 				{
-					"type": "plain_text",
-					"text": "*Repository:* ${{secrets.REPO}}",
+					"type": "mrkdwn",
+					"text": "*Repository:* <${{secrets.REPO}|${{secrets.REPO}}>",
 					"emoji": true
 				}
 			]
@@ -37,7 +37,7 @@
 			"type": "context",
 			"elements": [
 				{
-					"type": "plain_text",
+					"type": "mrkdwn",
 					"text": "${{secrets.RAILWAY_DOMAIN}}",
 					"emoji": true
 				}
