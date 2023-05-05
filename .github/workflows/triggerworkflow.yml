@@ -9,27 +9,27 @@ jobs:
         runs-on: ubuntu-latest
 
         steps:
-        - name: Checkout the repo
-          uses: actions/checkout@v3
+          - name: Checkout the repo
+            uses: actions/checkout@v3
 
-        - name: Set up Node.js
-          uses: actions/setup-node@v3
-          with: 
-            node-version: 16
-        
-        - name: Railway deploy
-          uses: bervProject/railway-deploy@main
-          env: 
-            RAILWAY_TOKEN: ${{secrets.RAILWAY_TOKEN}}
-          with: 
-            service: "animated-spoon"
-        
-        - name: Send custom JSON data to Slack workflow
-          id: slack
-          uses: slackapi/slack-github-action@v1.23.0
-          with: 
-            payload-file-path: "./slackcontent.json"
-          env: 
-            SLACK_WEBHOOK_URL: ${{secrets.SLACK_WEBHOOK_URL}}
-            SLACK_WEBHOOK_TYPE: INCOMING_WEBHOOK
+          - name: Set up Node.js
+            uses: actions/setup-node@v3
+            with: 
+              node-version: 16
+          
+          - name: Railway deploy
+            uses: bervProject/railway-deploy@main
+            env: 
+              RAILWAY_TOKEN: ${{secrets.RAILWAY_TOKEN}}
+            with: 
+              service: "animated-spoon"
+          
+          - name: Send custom JSON data to Slack workflow
+            id: slack
+            uses: slackapi/slack-github-action@v1.23.0
+            with: 
+              payload-file-path: "./slackcontent.json"
+            env: 
+              SLACK_WEBHOOK_URL: ${{secrets.SLACK_WEBHOOK_URL}}
+              SLACK_WEBHOOK_TYPE: INCOMING_WEBHOOK
             
