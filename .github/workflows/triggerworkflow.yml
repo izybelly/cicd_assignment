@@ -31,7 +31,6 @@ jobs:
             with:
                 payload: |
                   {
-                    "text": "test submission",
                     "blocks": [
                       {
                         "type": "section",
@@ -45,15 +44,15 @@ jobs:
                         "fields": [
                           {
                             "type": "mrkdwn",
-                            "text": "*Name:* <${{secrets.NAME}}>"
+                            "text": "*Name:* ${{secrets.NAME}}"
                           },
                           {
                             "type": "mrkdwn",
-                            "text": "*Email:* <${{secrets.EMAIL}}>"
+                            "text": "*Email:* ${{secrets.EMAIL}}"
                           },
                           {
                             "type": "mrkdwn",
-                            "text": "*Matriculation:* <${{secrets.MATRICULATION}}>"
+                            "text": "*Matriculation:* ${{secrets.MATRICULATION}}"
                           },
                           {
                             "type": "mrkdwn",
@@ -65,7 +64,7 @@ jobs:
                         "type": "section",
                         "text": {
                           "type": "mrkdwn",
-                          "text": "${{secrets.RAILWAY_DOMAIN}}|${{secrets.RAILWAY_DOMAIN}}"
+                          "text": "${{secrets.RAILWAY_DOMAIN}}"
                         },
                         "accessory": {
                           "type": "button",
