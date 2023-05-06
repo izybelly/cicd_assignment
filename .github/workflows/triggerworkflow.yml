@@ -32,7 +32,6 @@ jobs:
             with:
                 payload: |
                   {
-                    "text": "Github Action build result",
                     "blocks": [
                       {
                         "type": "header",
