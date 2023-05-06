@@ -34,9 +34,9 @@ jobs:
                   {
                     "blocks": [
                       {
-                        "type": "section",
+                        "type": "header",
                         "text": {
-                          "type": "mrkdwn",
+                          "type": "plain_text",
                           "text": "*DipSA 56 CI/CD Submission*"
                         }
                       },
