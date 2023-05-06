@@ -35,7 +35,9 @@ jobs:
                     "blocks": [
                       {
                         "type": "section",
-                        "text": "*DIPSA 56 CI/CD Submission*"
+                        "text": {
+                          "type": "plain_text",
+                          "text": "DipSA 56 CI/CD Submission"
                         }
                       },
                       {
