@@ -37,8 +37,7 @@ jobs:
                         "type": "header",
                         "text": {
                           "type": "mrkdwn",
-                          "text": "DIPSA 56 CI/CD Submission",
-                          "emoji": true
+                          "text": "DIPSA 56 CI/CD Submission"
                         }
                       },
                       {
@@ -46,23 +45,19 @@ jobs:
                         "fields": [
                           {
                             "type": "mrkdwn",
-                            "text": "*Name:* <${{secrets.NAME}}>",
-                            "emoji": true
+                            "text": "*Name:* <${{secrets.NAME}}>"
                           },
                           {
                             "type": "mrkdwn",
-                            "text": "*Email:* <${{secrets.EMAIL}}>",
-                            "emoji": true
+                            "text": "*Email:* <${{secrets.EMAIL}}>"
                           },
                           {
                             "type": "mrkdwn",
-                            "text": "*Matriculation:* <${{secrets.MATRICULATION}}>",
-                            "emoji": true
+                            "text": "*Matriculation:* <${{secrets.MATRICULATION}}>"
                           },
                           {
                             "type": "mrkdwn",
-                            "text": "*Repository:* <${{secrets.REPO}}>",
-                            "emoji": true
+                            "text": "*Repository:* <${{secrets.REPO}}>"
                           }
                         ]
                       },
