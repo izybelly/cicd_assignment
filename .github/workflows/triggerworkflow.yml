@@ -32,13 +32,13 @@ jobs:
             with:
                 payload: |
                   {
-                    "text": "Github Action build result"
+                    "text": "Github Action build result",
                     "blocks": [
                       {
                         "type": "header",
                         "text": {
                           "type": "plain_text",
-                          "text": "*DipSA 56 CI/CD Submission*"
+                          "text": "DipSA 56 CI/CD Submission"
                         }
                       },
                       {
