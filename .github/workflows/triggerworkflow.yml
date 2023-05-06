@@ -18,9 +18,6 @@ jobs:
               go-version: '>=1.17.0'
           - run: go version
           
-          - name: Set up Go dependency
-            run: go get github.com/tools/godep
-          
           - name: Railway deploy
             uses: bervProject/railway-deploy@main
             env: 
