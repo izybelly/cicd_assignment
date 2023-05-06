@@ -12,10 +12,14 @@ jobs:
           - name: Checkout the repo
             uses: actions/checkout@v3
 
-          - name: Set up Node.js
-            uses: actions/setup-node@v3
+          - name: Set up Go
+            uses: actions/setup-go@v4
             with: 
-              node-version: 16
+              go-version: '>=1.17.0'
+          - run: go version
+          
+          - name: Set up Go dependency
+            run: go get github.com/tools/godep
           
           - name: Railway deploy
             uses: bervProject/railway-deploy@main
@@ -27,9 +31,63 @@ jobs:
           - name: Send custom JSON data to Slack workflow
             id: slack
             uses: slackapi/slack-github-action@v1.23.0
-            with: 
-              payload-file-path: "./slackcontent.json"
-            env: 
-              SLACK_WEBHOOK_URL: ${{secrets.SLACK_WEBHOOK_URL}}
+            with:
+                payload: |
+                  {
+                    "blocks": [
+                      {
+                        "type": "header",
+                        "text": {
+                          "type": "mrkdwn",
+                          "text": "DIPSA 56 CI/CD Submission",
+                          "emoji": true
+                        }
+                      },
+                      {
+                        "type": "section",
+                        "fields": [
+                          {
+                            "type": "mrkdwn",
+                            "text": "*Name:* <${{secrets.NAME}}>",
+                            "emoji": true
+                          },
+                          {
+                            "type": "mrkdwn",
+                            "text": "*Email:* <${{secrets.EMAIL}}>",
+                            "emoji": true
+                          },
+                          {
+                            "type": "mrkdwn",
+                            "text": "*Matriculation:* <${{secrets.MATRICULATION}}>",
+                            "emoji": true
+                          },
+                          {
+                            "type": "mrkdwn",
+                            "text": "*Repository:* <${{secrets.REPO}}>",
+                            "emoji": true
+                          }
+                        ]
+                      },
+                      {
+                        "type": "section",
+                        "text": {
+                          "type": "mrkdwn",
+                          "text": "${{secrets.RAILWAY_DOMAIN}}|${{secrets.RAILWAY_DOMAIN}}"
+                        },
+                        "accessory": {
+                          "type": "button",
+                          "text": {
+                            "type": "plain_text",
+                            "text": "Go",
+                            "emoji": true
+                          },
+                          "value": "click_me_123",
+                          "url": "https://animated-spoon-production.up.railway.app/",
+                          "action_id": "button-action"
+                        }
+                      }
+                    ]
+                  }
+            env:
+              SLACK_WEBHOOK_URL: ${{ secrets.SLACK_WEBHOOK_URL }}
               SLACK_WEBHOOK_TYPE: INCOMING_WEBHOOK
-            
